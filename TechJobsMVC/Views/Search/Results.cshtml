@@ -1,0 +1,21 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    <table class="job-listing">
+        @foreach (var job in ViewBag.jobs)
+        {
+            <tr>
+                <th style="text-align:left">
+                    <br>
+                    ID: @job.Id<br><br>
+                    Name: @job.Name<br><br>
+                    Employer: @job.Employer<br><br>
+                    Location: @job.Location<br><br>
+                    Position Type: @job.PositionType<br><br>
+                    Skill: @job.CoreCompetency<br><br>
+                </th>
+            </tr>
+        }
+    </table>
+}

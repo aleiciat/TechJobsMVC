@@ -1,4 +1,5 @@
-﻿<div class="container body-content">
+﻿
+<div class="container body-content">
 
     <h1>@ViewBag.title</h1>
 
@@ -26,8 +27,6 @@
 
     <hr />
 
-    @{
-        //TODO #4: Loop over the search results to display all job fields.
-    }
-
+    <a asp-controller="Search" asp-action="Results">
+    </a>
 </div>

@@ -1,11 +1,12 @@
-﻿<div class="container body-content">
+﻿
+<div class="container body-content">
     <h1>@ViewBag.title</h1>
     <h2 class="centered">View Jobs By Category</h2>
 </div>
 
 <table class="centeredTable">
     <tr>
-        @foreach(var column in ViewBag.columns)
+        @foreach (var column in ViewBag.columns)
         {
             <th>@column.Value</th>
         }
@@ -13,9 +14,11 @@
     <tr>
         @{
             //TODO #2: Complete the View Jobs By Category Table
+
+                <td><li><a asp-controller="List" asp-action="Jobs" asp-route-column="all">View All</a></li></td>
+
         }
 
-        <td></td> @* Feel free to remove or modify this element if necessary. *@
         @foreach (var category in ViewBag.tableChoices)
         {
             <td>
@@ -30,4 +33,4 @@
             </td>
         }
     </tr>
-        </table>
+</table>
